@@ -3,6 +3,7 @@ package domains
 import "time"
 
 type Member struct {
+	ID        int64
 	Name      string
 	Link      string
 	Email     string
@@ -10,6 +11,7 @@ type Member struct {
 }
 
 type Repo struct {
+	ID        int64
 	Name      string
 	Link      string
 	CreatedAt *time.Time

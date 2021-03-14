@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8" />
+		<title>自助系统</title>
+	</head>
+	<body>
+		<ul>
+			{{ range .Urls }}
+				<li>
+					<a href="{{ .Path }}" > {{ .Text }}</a>
+				</li>
+			{{ end }}
+		</ul>
+		<div>
+			使用说明：
+			<ol>
+				<li>点击"加入组织"链接添加账号到组织</li>
+				<li>查收Github注册邮箱确认加入组织邮件, 并同意加入</li>
+				<li>点击"仓库列表"查找自己所在班级仓库信息, 并进行git clone, git pull, git push测试</li>
+				<li>可点击"待确认成员列表"和"已加入成员列表"查看加入组织情况</li>
+			<ol>
+		</div>
+	</body>
+</html>

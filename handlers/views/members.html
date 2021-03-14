@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8" />
+		<title>已加入成员</title>
+	</head>
+	<body>
+		<div><a href="/">返回</a></div>
+		{{ if .Error }}<div>{{ .Error }}</div>{{ end }}
+		<table border="1">
+			<thead>
+				<tr>
+					<th></th>
+					<th>名称</th>
+					<th>主页</th>
+				</tr>
+			</thead>
+			<tbody>
+			{{ range $idx, $member := .Members }}
+				<tr>
+					<td>{{ $idx }} </td>
+					<td>{{ $member.Name }}</td>
+					<td><a href="{{ $member.Link }}" target="_blank">{{ $member.Link }}</a></td>
+				</tr>
+			{{ end }}
+			</tbody>
+		</table>
+	</body>
+</html>
